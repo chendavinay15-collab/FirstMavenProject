@@ -37,17 +37,17 @@ pipeline {
 
         success {
             emailext(
-                subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: "The Jenkins CI pipeline completed successfully.",
-                to: "chendavinay.23.cse@anits.edu.in"
+                to: 'chendavinay.23.cse@anits.edu.in',
+                subject: 'Jenkins SUCCESS - FirstMaven-CI',
+                body: 'FirstMaven-CI build completed successfully.'
             )
         }
 
         failure {
             emailext(
-                subject: "FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: "The Jenkins CI pipeline failed. Please check the Jenkins console output.",
-                to: "chendavinay.23.cse@anits.edu.in"
+                to: 'chendavinay.23.cse@anits.edu.in',
+                subject: 'Jenkins FAILURE - FirstMaven-CI',
+                body: 'FirstMaven-CI build failed. Please check Jenkins Console Output.'
             )
         }
     }
