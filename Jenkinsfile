@@ -36,7 +36,7 @@ pipeline {
     post {
 
         success {
-            emailext(
+            mail(
                 to: 'chendavinay.23.cse@anits.edu.in',
                 subject: 'Jenkins SUCCESS - FirstMaven-CI',
                 body: 'FirstMaven-CI build completed successfully.'
@@ -44,10 +44,10 @@ pipeline {
         }
 
         failure {
-            emailext(
+            mail(
                 to: 'chendavinay.23.cse@anits.edu.in',
                 subject: 'Jenkins FAILURE - FirstMaven-CI',
-                body: 'FirstMaven-CI build failed. Please check Jenkins Console Output.'
+                body: 'FirstMaven-CI build failed.'
             )
         }
     }
