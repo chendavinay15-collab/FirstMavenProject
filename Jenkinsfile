@@ -34,11 +34,12 @@ pipeline {
     }
 
     post {
+
         success {
             mail(
                 to: 'chendavinay.23.cse@anits.edu.in',
                 subject: 'Jenkins SUCCESS - FirstMaven-CI',
-                body: 'Number Guessing Game project built successfully.'
+                body: 'FirstMaven-CI build completed successfully.'
             )
         }
 
@@ -46,7 +47,7 @@ pipeline {
             mail(
                 to: 'chendavinay.23.cse@anits.edu.in',
                 subject: 'Jenkins FAILURE - FirstMaven-CI',
-                body: 'Number Guessing Game project build failed.'
+                body: 'FirstMaven-CI build failed.'
             )
         }
     }
